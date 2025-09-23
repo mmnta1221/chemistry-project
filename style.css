@@ -1,0 +1,40 @@
+
+    :root{
+      --bg:#081226; --card:#0b1220; --muted:#9aa4b2; --text:#e6eef6;
+      --gap:8px; --radius:10px;
+      --alkali:#ff7b7b; --alkaline:#ffb86b; --trans:#ffd57a; --post:#d6e0ff; --metalloid:#9be7a6; --nonmetal:#83d2c3; --halogen:#ffa1f0; --noble:#9fd5ff; --lanth:#9be7ff; --act:#bfa2ff;
+      font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#041026 0%,var(--bg) 100%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .wrap{width:100%;max-width:1200px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:14px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+    .ptable{display:grid;grid-template-columns:repeat(18,1fr);grid-auto-rows:84px;gap:var(--gap)}
+    .el{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:8px;padding:10px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .el .number{font-size:12px;color:var(--muted)}
+    .el .symbol{font-weight:700;font-size:20px; fo}
+    .el .name{font-size:12px;color:var(--muted)}
+    .empty{background:transparent;box-shadow:none}
+
+    /* category accents */
+    .alkali{border-left:3px solid rgba(255,123,123,0.22)}
+    .alkaline{border-left:3px solid rgba(255,184,107,0.18)}
+    .transition{border-left:3px solid rgba(255,213,122,0.12)}
+    .post{border-left:3px solid rgba(214,224,255,0.12)}
+    .metalloid{border-left:3px solid rgba(155,231,170,0.12)}
+    .nonmetal{border-left:3px solid rgba(131,210,195,0.12)}
+    .halogen{border-left:3px solid rgba(255,161,240,0.12)}
+    .noble{border-left:3px solid rgba(159,213,255,0.12)}
+    .lanth{border-left:3px solid rgba(155,231,255,0.12)}
+    .act{border-left:3px solid rgba(191,162,255,0.12)}
+
+    .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .leg-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+    .swatch{width:18px;height:18px;border-radius:6px}
+
+    @media (max-width:1000px){.ptable{grid-auto-rows:68px}.el .symbol{font-size:18px}}
+    @media (max-width:600px){.ptable{grid-auto-rows:60px}}
